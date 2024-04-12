@@ -23,3 +23,18 @@ selectors.forEach((selector, index) => {
         }, 350);  
     })
 })
+
+const desc = document.querySelector(".desc")
+
+window.addEventListener("scroll", () => {
+    let rect = desc.getBoundingClientRect()
+    if (rect.top >= 0 && rect.top + 30 <= (window.innerHeight || document.documentElement.clientHeight)) {
+        let n = getComputedStyle(desc).getPropertyValue("--n")
+        if (n <= 30) {
+            setInterval(() => {
+                n++
+                desc.style.setProperty("--n", n);
+            }, 100)
+        }    
+    }
+})
