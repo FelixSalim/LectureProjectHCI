@@ -23,12 +23,12 @@ body {
     min-height: 100vh;
     min-width: 40%;
     max-width: 40%;
-    background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
+    background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/login-banner.jpg);
     background-size: cover;
-    background-position: 50%;
+    background-position: 70%;
 }
 
-.register {
+.login {
     margin: 2rem;
     width: 100%;
 }
@@ -63,7 +63,7 @@ h2 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.register-form {
+.login-form {
     margin-top: 1.5rem;
     background-color: #535C91;
     display: flex;
@@ -78,6 +78,15 @@ h2 {
     height: 5rem;
     justify-content: space-around;
     margin-bottom: 1rem;
+}
+
+.login-extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-extra input {
+    accent-color: #f7caee;
 }
 
 .form-button {
@@ -106,32 +115,32 @@ h2 {
 }
 
 .form-extra {
-    display: flex;
     margin-top: 1rem;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .form-extra>p {
+    margin-top: 1rem;
     position: relative;
     top:1rem;
-    margin-top: 1rem;
 }
 
-.login-text {
+.register-text {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-link {
+.register-link {
     margin-left: 0.2rem;
     text-decoration: underline;
     font-weight: 700;
 }
 
-.login-link:hover {
+.register-link:hover {
     cursor: pointer;
     color: #f7caee;
 }
@@ -140,7 +149,7 @@ label {
     font-weight: 600;
 }
 
-input {
+.form-section input {
     color: black;
     border-radius: 10px;
     padding: calc(0.5rem + 3px);
@@ -151,7 +160,7 @@ input {
     box-shadow: 1px 1px 3px 0px rgba(247, 202, 238,0.8);
 }
 
-input:focus {
+.form-section input:focus {
     background-color: white;
     padding: 0.5rem;
     outline: none;
@@ -159,6 +168,6 @@ input:focus {
     border: 3px #f7caee solid;
 }
 
-input:focus + label {
+.form-section input:focus + label {
     color: #f7caee;
 }

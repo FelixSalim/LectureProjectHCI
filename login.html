@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wendigg Revamp Store</title>
-    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="stylesheet" href="./styles/login.css">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,58 +14,46 @@
 <body>
     <main class="container">
         <div class="banner"></div>
-        <section class="register">
+        <section class="login">
             <header class="header">
                 <div class="title">
-                    <h1>Create an Account</h1>
+                    <h1>Sign In To Your Account</h1>
                     <h2>Please fill in your data</h2>
                 </div>
                 <img id="back" src="./assets/images/back-arrow.svg" alt="back" srcset="">
             </header>
-            <form class="register-form">
-                <div class="form-section">
-                    <input type="text" id="name">
-                    <label for="name" class="label">Full Name</label>
-                </div>
-
+            <form class="login-form">
                 <div class="form-section">    
                     <input type="text" id="username">
                     <label for="username" class="label">Username</label>
                 </div>
-
-                <div class="form-section">    
-                    <input type="text" id="phone">
-                    <label for="phone" class="label">Phone Number</label>
-                </div>
-
-                <div class="form-section">
-                    <input type="email" id="email">
-                    <label for="email" class="label">Email</label>
-                </div>
-
+                
                 <div class="form-section">   
                     <input type="password" id="password">
                     <label for="password" class="label">Password</label>
-                </div>
+                </div>  
 
-                <div class="form-section">   
-                    <input type="password" id="conf-password">
-                    <label for="conf-password" class="label">Confirm Password</label>
+                <div class="login-extra">
+                    <div class="remember-check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember" class="label">Remember me</label>
+                    </div>
+                    <a href="" class="forget-link">Forgot password?</a>
                 </div>
 
                 <div class="form-button">
-                    <button class="button">Sign Up</button>
+                    <button class="button">Sign In</button>
                 </div>
                 <div class="form-extra">
-                    <div class="login-text">
-                        <p>Already have an account?</p>
-                        <a class="login-link" href="login.html">Login now</a>
+                    <div class="register-text">
+                        <p>Don't have an account?</p>
+                        <a class="register-link" href="register.html">Register now</a>
                     </div>
                     <p>&copy 2024 PT. WENDIGG DIGITAL SOLUTION</p>
                 </div>
             </form>
         </section>
     </main>
-    <script src="./scripts/register.js"></script>
+    <script src="./scripts/login.js"></script>
 </body>
 </html>
