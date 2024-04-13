@@ -74,8 +74,8 @@ h2 {
     flex-direction: column;
     padding: 2rem;
     border-radius: 50px;
-    min-width: 70vh;
-    max-width: 70vh;
+    min-width: 40vw;
+    max-width: 40vw;
 }
 
 .form-section {
