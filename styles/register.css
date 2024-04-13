@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #031335;
+}
+
+.container {
+    display: flex;
+}   
+
+.banner {
+    z-index: -1;
+    min-height: 100vh;
+    min-width: 40%;
+    max-width: 40%;
+    background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.register {
+    margin: 2rem;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+}
+
+
+h1 {
+    width: 100%;
+    font-size: 3em;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.register-form {
+    min-height: 90%;
+    margin-top: 1.5rem;
+    background-color: #535C91;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 50px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 5rem;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.form-button {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 1rem 0; 
+    width: 50%;
+    background-color: white;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+}
+
+.button:hover {
+    background-color: #f7caee;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.form-extra {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.form-extra>p {
+    position: relative;
+    top:1rem;
+}
+
+.login-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-link {
+    margin-left: 0.2rem;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.login-link:hover {
+    cursor: pointer;
+    color: #f7caee;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    color: black;
+    border-radius: 10px;
+    padding: calc(0.5rem + 3px);
+    padding-left: 1em !important;
+    border: none;
+    font-size: 1.2em;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 1px 1px 3px 0px rgba(247, 202, 238,0.8);
+}
+
+input:focus {
+    background-color: white;
+    padding: 0.5rem;
+    outline: none;
+    color: #535c91;
+    border: 3px #f7caee solid;
+}
+
+input:focus + label {
+    color: #f7caee;
+}
