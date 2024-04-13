@@ -20,7 +20,20 @@ selectors.forEach((selector, index) => {
             setTimeout(() => {
                 cards[index].style.opacity = "1"
             }, 30)
-        }, 350);  
+        }, 350)
+    })
+})
+
+cards.forEach((card) => {
+    card.addEventListener("click", () => {
+        let cells = ["game", "voucher", "pulsa", "eWallet"]
+        let index = 0
+        selectors.forEach((selector, idx) => {
+            if (selector.classList.contains("active-selector")){
+                index = idx
+            }
+        })
+        window.location.href = `items.html?type=${cells[index]}`
     })
 })
 
@@ -33,7 +46,7 @@ window.addEventListener("scroll", () => {
         if (n <= 30) {
             setInterval(() => {
                 n++
-                desc.style.setProperty("--n", n);
+                desc.style.setProperty("--n", n)
             }, 100)
         }    
     }
