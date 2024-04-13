@@ -39,7 +39,7 @@ cards.forEach((card) => {
 
 const desc = document.querySelector(".desc")
 
-window.addEventListener("scroll", () => {
+setInterval(() => {
     let rect = desc.getBoundingClientRect()
     if (rect.top >= 0 && rect.top + 30 <= (window.innerHeight || document.documentElement.clientHeight)) {
         let n = getComputedStyle(desc).getPropertyValue("--n")
@@ -50,4 +50,4 @@ window.addEventListener("scroll", () => {
             }, 100)
         }    
     }
-})
+}, 100)
