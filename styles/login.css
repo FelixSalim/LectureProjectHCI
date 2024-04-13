@@ -16,11 +16,12 @@ body {
 
 .container {
     display: flex;
+    min-height: 100vh;
 }   
 
 .banner {
     z-index: -1;
-    min-height: 100vh;
+    min-height: 100%;
     min-width: 40%;
     max-width: 40%;
     background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/login-banner.jpg);
@@ -29,6 +30,9 @@ body {
 }
 
 .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2rem;
     width: 100%;
 }
@@ -70,6 +74,8 @@ h2 {
     flex-direction: column;
     padding: 2rem;
     border-radius: 50px;
+    min-width: 70vh;
+    max-width: 70vh;
 }
 
 .form-section {
