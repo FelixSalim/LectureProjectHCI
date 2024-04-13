@@ -12,28 +12,35 @@ html {
 
 body {
     background-color: #031335;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .container {
     display: flex;
-    min-height: 100vh;
+    flex-direction: row-reverse;
+    min-width: 50%;
+    min-height: 60%;
+    border-radius: 15px;
+    background-color: rgb(83, 92, 145);
 }   
 
 .banner {
-    z-index: -1;
-    min-height: 100%;
-    min-width: 40%;
-    max-width: 40%;
-    background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
+    z-index: 1;
+    width: 70%;
+    background-image:  linear-gradient(to right,rgba(83, 92, 145,0) 0%,rgba(83, 92, 145, 1) 100%), url(../assets/images/register-banner.jpg);
     background-size: cover;
     background-position: 50%;
+    transform: scale(-1, 1);
+    border-radius: 25px;
 }
 
 .register {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 2rem;
     width: 100%;
 }
 
@@ -58,32 +65,27 @@ body {
 
 h1 {
     width: 100%;
-    font-size: 3em;
+    font-size: 1em;
 }
 
 h2 {
     margin-top: 0.5rem;
-    font-size: 1em;
+    font-size: 0.5em;
     color: rgba(255, 255, 255, 0.5);
 }
 
 .register-form {
-    margin-top: 1.5rem;
-    background-color: #535C91;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    border-radius: 50px;
-    min-width: 40vw;
-    max-width: 40vw;
+    justify-content: space-evenly;
 }
 
 .form-section {
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column-reverse;
-    height: 5rem;
     justify-content: space-around;
-    margin-bottom: 1rem;
 }
 
 .form-button {
@@ -94,8 +96,8 @@ h2 {
 }
 
 .button {
-    border-radius: 10px;
-    padding: 1rem 0; 
+    border-radius: 5px;
+    padding: 0.5rem 0; 
     width: 50%;
     background-color: white;
     color: black;
@@ -143,26 +145,19 @@ h2 {
 }
 
 label {
+    font-size: 1em;
     font-weight: 600;
 }
 
 input {
-    color: black;
-    border-radius: 10px;
-    padding: calc(0.5rem + 3px);
-    padding-left: 1em !important;
+    width: 80%;
+    color: white; 
+    padding-top: 1rem;
+    font-size: 1em;
+    background-color: transparent;
     border: none;
-    font-size: 1.2em;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 1px 1px 3px 0px rgba(247, 202, 238,0.8);
-}
-
-input:focus {
-    background-color: white;
-    padding: 0.5rem;
     outline: none;
-    color: #535c91;
-    border: 3px #f7caee solid;
+    border-bottom: 1px #f7caee solid;
 }
 
 input:focus + label {
