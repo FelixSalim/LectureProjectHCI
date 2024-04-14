@@ -107,3 +107,8 @@ if (type == "game") {
     <p>${price}</p>
     `
 }
+
+const btn = document.querySelector(".pay-btn")
+btn.addEventListener("click", () => {
+    document.location.href = "index.html"
+})
