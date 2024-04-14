@@ -216,14 +216,11 @@ body {
     margin-top: 30px;
     flex-wrap: wrap;
     transition: 0.35s ease-in-out;
+    display: none;
 }
 
 .shown {
     display: flex;
-}
-
-.hidden {
-    display: none;
 }
 
 .card {

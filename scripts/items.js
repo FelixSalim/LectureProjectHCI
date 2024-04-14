@@ -60,7 +60,7 @@ if(type == "game") {
     for (let i = 0; i < 24; i++) {
         nominals.innerHTML += `
         <div class="nominal-cards"> 
-            <p>Mobile Legends Gift Card $5</p>
+            <p>MLBB Gift Card $5</p>
             <p>Rp66.200</p>
         </div>
         `
@@ -91,13 +91,75 @@ const accDetails = document.querySelector(".account-details")
 if (type == "game") {
     accDetails.innerHTML = `
     <p>User ID</p>
-    <input type="text">
+    <input type="text" class="UID">
     <p>Server ID</p>
-    <input type="text">
+    <input type="text" class="SID">
     `
 } else if (type == "pulsa" || type == "eWallet") {
     accDetails.innerHTML = `
     <p>Nomor Tujuan</p>
-    <input type="text">
+    <input type="text" class="Number">
     `
 }
+
+const methods = document.querySelectorAll(".methods")
+const dropdown = document.querySelectorAll(".dropdown")
+
+methods.forEach((method, index) => {
+    method.addEventListener("click", () => {
+        dropdown.forEach((drop, idx) => {
+            if (idx != index) drop.classList.remove("active-dropdown")
+        })
+        dropdown[index].classList.toggle("active-dropdown")
+    })
+})
+
+const items = document.querySelectorAll(".nominal-cards")
+const methodItems = document.querySelectorAll(".dropdown-item")
+items.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        items.forEach((it, idx) => {
+            if (idx != index) it.classList.remove("selected-item")
+        })
+        item.classList.toggle("selected-item")
+    })
+})
+methodItems.forEach((item, index) => {
+    item.addEventListener("click", (e) => {
+        e.stopPropagation()
+        methodItems.forEach((it, idx) => {
+            if (idx != index) it.classList.remove("selected-item")
+        })
+        item.classList.toggle("selected-method")
+    })
+})
+
+const btn = document.querySelector(".continue-btn")
+const error = document.querySelector(".error")
+btn.addEventListener("click", () => {
+    let selectedItem = document.querySelector(".selected-item p:first-of-type")
+    let selectedMethod = document.querySelector(".selected-method p")
+    if (type == "game") {
+        let UID = document.querySelector(".UID").value
+        let SID = document.querySelector(".SID").value
+        if (selectedItem != null && selectedMethod != null && UID.length != 0 && SID.length != 0) {
+            document.location.href = `index.html?type=game&item=${selectedItem.textContent}&UID=${UID}&SID=${SID}&method=${selectedMethod.textContent}`
+        } else {
+            error.style.display = "flex"
+        }
+    } else if (type == "eWallet" || type == "pulsa") {
+        let phone = document.querySelector(".Number").value
+        if (selectedItem != null && selectedMethod != null && phone.length != 0) {
+            document.location.href = `index.html?type=game&item=${selectedItem.textContent}&phone=${phone}&method=${selectedMethod.textContent}`
+        } else {
+            error.style.display = "flex"
+        }
+    } else {
+        if (selectedItem != null && selectedMethod != null) {
+            document.location.href = `index.html?type=voucher&item=${selectedItem.textContent}&methodd=${selectedMethod.textContent}`
+        } else {
+            error.style.display = "flex"
+        }
+    }
+})
+

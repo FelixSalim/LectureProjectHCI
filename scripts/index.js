@@ -11,11 +11,9 @@ selectors.forEach((selector, index) => {
             card.style.opacity = "0"
             setTimeout(() => {
                 card.classList.remove("shown")
-                card.classList.add("hidden")
             }, 350); 
         })
         setTimeout(() => {
-            cards[index].classList.remove("hidden")
             cards[index].classList.add("shown")
             setTimeout(() => {
                 cards[index].style.opacity = "1"
