@@ -137,26 +137,26 @@ methodItems.forEach((item, index) => {
 const btn = document.querySelector(".continue-btn")
 const error = document.querySelector(".error")
 btn.addEventListener("click", () => {
-    let selectedItem = document.querySelector(".selected-item p:first-of-type")
+    let selectedItem = document.querySelectorAll(".selected-item p")
     let selectedMethod = document.querySelector(".selected-method p")
     if (type == "game") {
         let UID = document.querySelector(".UID").value
         let SID = document.querySelector(".SID").value
         if (selectedItem != null && selectedMethod != null && UID.length != 0 && SID.length != 0) {
-            document.location.href = `index.html?type=game&item=${selectedItem.textContent}&UID=${UID}&SID=${SID}&method=${selectedMethod.textContent}`
+            document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&UID=${UID}&SID=${SID}&method=${selectedMethod.textContent}`
         } else {
             error.style.display = "flex"
         }
     } else if (type == "eWallet" || type == "pulsa") {
         let phone = document.querySelector(".Number").value
         if (selectedItem != null && selectedMethod != null && phone.length != 0) {
-            document.location.href = `index.html?type=game&item=${selectedItem.textContent}&phone=${phone}&method=${selectedMethod.textContent}`
+            document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&phone=${phone}&method=${selectedMethod.textContent}`
         } else {
             error.style.display = "flex"
         }
     } else {
         if (selectedItem != null && selectedMethod != null) {
-            document.location.href = `index.html?type=voucher&item=${selectedItem.textContent}&methodd=${selectedMethod.textContent}`
+            document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&method=${selectedMethod.textContent}`
         } else {
             error.style.display = "flex"
         }
