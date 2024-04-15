@@ -43,16 +43,24 @@
                     <label for="email" class="label">Email</label>
                 </div>
 
-                <div class="form-section">   
-                    <input type="password" id="password">
+                <div class="form-section">
+                    <div class="pass-form-section">
+                        <input type="password" id="password">
+                        <img src="assets/images/see.png" alt="" class="see">
+                    </div> 
                     <label for="password" class="label">Password</label>
                 </div>
 
                 <div class="form-section">   
-                    <input type="password" id="conf-password">
+                    <div class="pass-form-section">
+                        <input type="password" id="conf-password">
+                        <img src="assets/images/see.png" alt="" class="see">
+                    </div>
                     <label for="conf-password" class="label">Confirm Password</label>
                 </div>
-
+                <div class="error-msg">
+                    <p class="error"></p>
+                </div>
                 <div class="form-button">
                     <button class="button">Sign Up</button>
                 </div>
@@ -66,6 +74,7 @@
             </form>
         </section>
     </main>
+    <script src="scripts/acc.js"></script>
     <script src="./scripts/register.js"></script>
 </body>
 </html>

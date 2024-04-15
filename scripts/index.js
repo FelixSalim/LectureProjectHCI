@@ -1,3 +1,31 @@
+loadLocalStorage()
+loadCurrentUser()
+
+const logRegSect = document.querySelector(".log-reg-section")
+if (activeUser == -1) {
+    logRegSect.innerHTML = `
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    `
+} else {
+    let username = accounts.userNames[activeUser]
+    if (username.length > 6) {
+        username = username.substring(0, 6) + "..."
+    }
+    logRegSect.innerHTML = `
+    <img src="assets/images/profilepic.png">
+    <p>${username}</p>
+    <p>Logout</p>
+    `
+
+    const logout = document.querySelector(".log-reg-section p:last-of-type")
+    logout.addEventListener("click", () => {
+        activeUser = -1;
+        storeCurrentUser()
+        document.location.href = "index.html"
+    })
+}
+
 const selectors = document.querySelectorAll(".selection")
 const cards = document.querySelectorAll(".cards")
 

@@ -1,3 +1,31 @@
+loadLocalStorage()
+loadCurrentUser()
+
+const logRegSect = document.querySelector(".log-reg-section")
+if (activeUser == -1) {
+    logRegSect.innerHTML = `
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    `
+} else {
+    let username = accounts.userNames[activeUser]
+    if (username.length > 6) {
+        username = username.substring(0, 6) + "..."
+    }
+    logRegSect.innerHTML = `
+    <img src="assets/images/profilepic.png">
+    <p>${username}</p>
+    <p>Logout</p>
+    `
+
+    const logout = document.querySelector(".log-reg-section p:last-of-type")
+    logout.addEventListener("click", () => {
+        activeUser = -1;
+        storeCurrentUser()
+        document.location.href = "index.html"
+    })
+}
+
 const desc = document.querySelector(".desc")
 
 setInterval(() => {
@@ -143,21 +171,60 @@ btn.addEventListener("click", () => {
         let UID = document.querySelector(".UID").value
         let SID = document.querySelector(".SID").value
         if (selectedItem != null && selectedMethod != null && UID.length != 0 && SID.length != 0) {
-            document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&UID=${UID}&SID=${SID}&method=${selectedMethod.textContent}`
+            let flag = true
+            for (let i = 0; i < UID.length; i++) {
+                if (UID[i] >= "0" && UID[i] <= "9") {
+                    continue
+                } else {
+                    flag = false
+                    break
+                }
+            }
+
+            for (let i = 0; i < SID.length; i++) {
+                if (SID[i] >= "0" && SID[i] <= "9") {
+                    continue
+                } else {
+                    flag = false
+                    break
+                }
+            }
+            
+            if (flag) document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&UID=${UID}&SID=${SID}&method=${selectedMethod.textContent}`
+            else {
+                error.innerHTML = "User ID dan Server ID hanya boleh angka !"
+                error.style.display = "flex"
+            }
         } else {
+            error.innerHTML = "Data belum lengkap!"
             error.style.display = "flex"
         }
     } else if (type == "eWallet" || type == "pulsa") {
         let phone = document.querySelector(".Number").value
         if (selectedItem != null && selectedMethod != null && phone.length != 0) {
-            document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&phone=${phone}&method=${selectedMethod.textContent}`
+            let flag = true
+            for (let i = 0; i < phone.length; i++) {
+                if (phone[i] >= "0" && phone[i] <= "9") {
+                    continue;
+                } else {
+                    flag = false
+                    break
+                }
+            }
+            if (flag) document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&phone=${phone}&method=${selectedMethod.textContent}`
+            else {
+                error.innerHTML = "Nomor Telepon hanya boleh angka!"
+                error.style.display = "flex"
+            }
         } else {
+            error.innerHTML = "Data belum lengkap!"
             error.style.display = "flex"
         }
     } else {
         if (selectedItem != null && selectedMethod != null) {
             document.location.href = `trans.html?type=${type}&item=${selectedItem[0].textContent}&price=${selectedItem[1].textContent}&method=${selectedMethod.textContent}`
         } else {
+            error.innerHTML = "Data belum lengkap!"
             error.style.display = "flex"
         }
     }

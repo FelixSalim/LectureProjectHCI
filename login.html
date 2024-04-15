@@ -29,7 +29,10 @@
                 </div>
                 
                 <div class="form-section">   
-                    <input type="password" id="password">
+                    <div class="pass-form-section">
+                        <input type="password" id="password">
+                        <img src="assets/images/see.png" alt="" class="see">
+                    </div>
                     <label for="password" class="label">Password</label>
                 </div>  
 
@@ -39,6 +42,10 @@
                         <label for="remember" class="label">Remember me</label>
                     </div>
                     <a href="" class="forget-link">Forgot password?</a>
+                </div>
+
+                <div class="error-msg">
+                    <p class="error"></p>
                 </div>
 
                 <div class="form-button">
@@ -54,6 +61,7 @@
             </form>
         </section>
     </main>
+    <script src="scripts/acc.js"></script>
     <script src="./scripts/login.js"></script>
 </body>
 </html>

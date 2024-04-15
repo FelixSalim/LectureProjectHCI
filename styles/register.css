@@ -86,6 +86,23 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.pass-form-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.pass-form-section input {
+    width: 100%;
+}
+
+.see {
+    position: absolute;
+    width: 4%;
+    height: auto;
+}
+
 .form-button {
     margin-top: 1rem;
     display: flex;
@@ -167,4 +184,15 @@ input:focus {
 
 input:focus + label {
     color: #f7caee;
+}
+
+.error-msg {
+    display: flex;
+    justify-content: center;;
+}
+
+.error-msg p {
+    color: red;
+    font-weight: 600;
+    font-size: 1em;
 }
