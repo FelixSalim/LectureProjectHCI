@@ -69,5 +69,5 @@ btn.addEventListener("click", (e) => {
     error.innerHTML = ""
     pushAcc(fullName, userName, password, phoneNumber, email)
     storeLocalStorage()
-    window.href.location = "login.html"
+    document.location.href = "login.html"
 })

@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Mobile Legends [PROMO TERMURAH] V3",
+        "image" : "assets/images/game-icon.png", 
+        "type" : "game"
+    }, 
+    {
+        "name" : "Mobile Legends [VOUCEHERS] V3",
+        "image" : "assets/images/game-icon.png",
+        "type" : "voucher"
+    },
+    {
+        "name" : "Pulsa Lengkap Telkomsel [HARGA TERMURAH]",
+        "image" : "assets/images/pulsa-icon.png",
+        "type" : "pulsa"
+    },
+    {
+        "name" : "Top Up Saldo Gopay [HARGA TERMURAH]",
+        "image" : "assets/images/eWallet-icon.png",
+        "type" : "eWallet"
+    }
+]

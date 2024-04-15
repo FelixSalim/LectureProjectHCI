@@ -129,6 +129,44 @@ body {
     margin-right: 20px;
 }
 
+.auto-complete-items {
+    position: absolute;
+    z-index: 10;
+    width: calc(0.95 * 0.75 * 0.7 * 95%);
+}
+
+.ac-items { 
+    width: 100%;
+    background-color: #1B1A55;
+    display: flex;
+    align-items: center;
+    border: 2px solid #4C2BD2;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.ac-items img {
+    width: 20%;
+    margin: 0 20px;
+    border-radius: 25px;
+}
+
+.ac-items p {
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.ac-items:hover {
+    background-color: #4C2BD2;
+}
+
+.ac-items:hover p {
+    color: #F7B176;
+}
+
 .log-reg-section {
     width: 25%;
     display: flex;
@@ -153,7 +191,7 @@ body {
 }
 
 .log-reg-section p:first-of-type {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     cursor: default;
 }

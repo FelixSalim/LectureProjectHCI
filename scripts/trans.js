@@ -9,8 +9,8 @@ if (activeUser == -1) {
     `
 } else {
     let username = accounts.userNames[activeUser]
-    if (username.length > 6) {
-        username = username.substring(0, 6) + "..."
+    if (username.length > 5) {
+        username = username.substring(0, 5) + ".."
     }
     logRegSect.innerHTML = `
     <img src="assets/images/profilepic.png">
@@ -25,6 +25,45 @@ if (activeUser == -1) {
         document.location.href = "index.html"
     })
 }
+
+let alreadyIn = []
+
+$(document).ready(() => {
+    $(".search-input").keyup(() => {
+        let search = $(".search-input").val()
+        let regex = new RegExp(search, "i") // "i" = case insensitive
+        let nameInsert = []
+        let imageInsert = []
+        let typeInsert = []
+        $.getJSON("assets/data/game-data.json", (data) => {
+            $.each(data, (key, value) => {
+                if (value.name.search(regex) != -1 && search != "") { // exists
+                    nameInsert.push(value.name)
+                    imageInsert.push(value.image)
+                    typeInsert.push(value.type)
+                    
+                }
+            })
+            if (typeInsert.length != alreadyIn.length) {
+                $(".auto-complete-items").html("")
+                for (let i = 0; i < nameInsert.length; i++) {
+                    $(".auto-complete-items").append(
+                        `
+                        <div class="ac-items ${typeInsert[i]}">
+                            <img src="${imageInsert[i]}">
+                            <p>${nameInsert[i]}</p>
+                        </div>
+                        `
+                    )
+                    alreadyIn.push(typeInsert[i])
+                    document.querySelector(`.${typeInsert[i]}`).addEventListener("click", () => {
+                        window.location.href = "items.html?type=" + typeInsert[i]
+                    })
+                } 
+            }
+        })
+    })
+})
 
 const desc = document.querySelector(".desc")
 
