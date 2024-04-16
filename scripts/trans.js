@@ -13,8 +13,10 @@ if (activeUser == -1) {
         username = username.substring(0, 5) + ".."
     }
     logRegSect.innerHTML = `
-    <img src="assets/images/profilepic.png">
-    <p>${username}</p>
+    <div class="profile-section">
+        <img src="assets/images/profilepic.png">
+        <p>${username}</p>
+    </div>
     <p>Logout</p>
     `
 
@@ -64,6 +66,37 @@ $(document).ready(() => {
         })
     })
 })
+
+const checkTrans = document.querySelectorAll(".check-trans")
+const contentWarning = document.querySelector(".content-warning")
+checkTrans.forEach((c) => {
+    c.addEventListener("click", (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        if (activeUser == -1) {
+            contentWarning.classList.add("show-warning")
+        } else {
+            document.location.href = "trans_history.html"
+        }
+    })
+})
+
+const exit = document.querySelector(".exit-container img")
+const logWarn = document.querySelector(".login-warning")
+
+function removePopUp() {
+    contentWarning.classList.remove("show-warning")
+}
+
+logWarn.addEventListener("click", (e) => {
+    document.removeEventListener("click", removePopUp)
+    setTimeout(() => {
+        document.addEventListener("click", removePopUp)
+    }, 10)
+})
+
+document.addEventListener("click", removePopUp)
+exit.addEventListener("click", removePopUp)
 
 const desc = document.querySelector(".desc")
 
