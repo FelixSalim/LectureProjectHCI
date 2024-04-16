@@ -129,12 +129,21 @@ const gameTitle = document.querySelector(".game-title p")
 const detTitle = document.querySelector(".det-title")
 const det = document.querySelector(".det")
 let date = new Date()
+let currDate = `${(date.getDate() < 10) ? "0" + date.getDate() : date.getDate()} - ${(date.getMonth() < 10) ? "0" + date.getMonth() : date.getMonth()} - ${date.getFullYear()} | ${(date.getHours() < 10) ? "0" + date.getHours() : date.getHours()}:${(date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes()}:${(date.getSeconds() < 10) ? "0" + date.getSeconds() : date.getSeconds()}`
 let method = searchParam.get("method")
 let item = searchParam.get("item")
 let price = searchParam.get("price")
+let transData = {
+    transID : "#API1234554321",
+    transDate : currDate,
+    item : item,
+    method : method,
+    price : price
+}
 if (type == "game") {
     let UID = searchParam.get("UID")
     let SID = searchParam.get("SID")
+    transData.ID = UID + " (" + SID + ")"
     gameTitle.innerHTML = "Mobile Legends [PROMO TERMURAH] V3"
     detTitle.innerHTML = `
     <p>Transaction ID</p>
@@ -146,13 +155,14 @@ if (type == "game") {
     `
     det.innerHTML = `
     <p>#API1234554321</p>
-    <p>${(date.getDate() < 10) ? "0" + date.getDate() : date.getDate()} - ${(date.getMonth() < 10) ? "0" + date.getMonth() : date.getMonth()} - ${date.getFullYear()} | ${(date.getHours() < 10) ? "0" + date.getHours() : date.getHours()}:${(date.getMinutes() < 10) ? "0" + date.getMinutes() : date.getMinutes()}:${(date.getSeconds() < 10) ? "0" + date.getSeconds() : date.getSeconds()}</p>
-    <p>${UID} (${SID})</p>
-    <p>${method}</p>
-    <p>${item}</p>
-    <p>${price}</p>
+    <p>${transData.transDate}</p>
+    <p>${transData.ID}</p>
+    <p>${transData.method}</p>
+    <p>${transData.item}</p>
+    <p>${transData.price}</p>
     `
 } else if (type == "voucher") {
+    transData.ID = "-"
     gameTitle.innerHTML = "Mobile Legends [VOUCHERS] V3"
     detTitle.innerHTML = `
     <p>Transaction ID</p>
@@ -170,6 +180,7 @@ if (type == "game") {
     `
 } else if (type == "pulsa") {
     let phone = searchParam.get("phone")
+    transData.ID = phone
     gameTitle.innerHTML = "Pulsa Lengkap Telkomsel"
     detTitle.innerHTML = `
     <p>Transaction ID</p>
@@ -189,6 +200,7 @@ if (type == "game") {
     `
 } else {
     let phone = searchParam.get("phone")
+    transData.ID = phone
     gameTitle.innerHTML = "Top Up Saldo Gopay"
     detTitle.innerHTML = `
     <p>Transaction ID</p>
@@ -210,5 +222,12 @@ if (type == "game") {
 
 const btn = document.querySelector(".pay-btn")
 btn.addEventListener("click", () => {
-    document.location.href = "index.html"
+    if (activeUser != -1) {
+        console.log(transData)
+        accounts.trans[activeUser].push(transData)
+        storeLocalStorage()
+    }
+    setTimeout(() => {
+        document.location.href = "index.html"
+    }, 10)
 })
