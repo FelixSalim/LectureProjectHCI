@@ -10,7 +10,7 @@ if (activeUser == -1) {
 } else {
     let username = accounts.userNames[activeUser]
     if (username.length > 5) {
-        username = username.substring(0, 5) + ".."
+        username = username.substring(0, 5) + "<br>.."
     }
     logRegSect.innerHTML = `
     <div class="profile-section">
@@ -20,7 +20,12 @@ if (activeUser == -1) {
     <p>Logout</p>
     `
 
-    const logout = document.querySelector(".log-reg-section p:last-of-type")
+    const user = document.querySelector(".profile-section > p")
+    user.addEventListener("click", () => {
+        document.location.href = "trans_history.html"
+    })
+
+    const logout = document.querySelector(".log-reg-section > p")
     logout.addEventListener("click", () => {
         activeUser = -1;
         storeCurrentUser()
@@ -97,6 +102,59 @@ logWarn.addEventListener("click", (e) => {
 
 document.addEventListener("click", removePopUp)
 exit.addEventListener("click", removePopUp)
+
+const mainProfile = document.querySelector(".main")
+const details = document.querySelector(".details")
+
+mainProfile.innerHTML = `
+    <img src="assets/images/profilepic.png">
+    <p>${accounts.userNames[activeUser]}</p>
+`
+
+details.innerHTML = `
+    <div class="detail">
+        <p>Fullname</p>
+        <p>:&emsp;${accounts.fullNames[activeUser]}</p>
+    </div>
+    <div class="detail">
+        <p>Username</p>
+        <p>:&emsp;${accounts.userNames[activeUser]}</p>
+    </div>
+    <div class="detail">
+        <p>Nomor Telepon</p>
+        <p>:&emsp;${accounts.phones[activeUser]}</p>
+    </div>
+    <div class="detail">
+        <p>Email</p>
+        <p>:&emsp;${accounts.emails[activeUser]}</p>
+    </div>
+`
+
+const trans = document.querySelector(".transaction-details")
+trans.innerHTML = ""
+if (accounts.trans[activeUser].length == 0) {
+    trans.innerHTML = `
+        <div class="trans-detail">
+            <p> - </p>
+            <p> - </p>
+            <p> - </p>
+            <p> - </p>
+            <p> - </p>
+        </div>
+    `
+}
+for (let i = 0; i < accounts.trans[activeUser].length; i++) {
+    let transaction = accounts.trans[activeUser][i]
+    trans.innerHTML += `
+    <div class="trans-detail">
+        <p> ${transaction.transDate} </p>
+        <p> ${transaction.transID} </p>
+        <p> ${transaction.item} </p>
+        <p> ${transaction.ID} </p>
+        <p> Pending </p>
+    </div>
+    `
+}
 
 const desc = document.querySelector(".desc")
 

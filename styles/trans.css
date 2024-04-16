@@ -265,7 +265,8 @@ body {
 .profile-section p {
     font-size: 18px;
     font-weight: bold;
-    cursor: default;
+    cursor: pointer;
+    text-align: center;
 }
 
 .log-reg-section > p {
@@ -273,7 +274,7 @@ body {
     cursor: pointer;
 }
 
-.log-reg-section > p:hover {
+.log-reg-section > p:hover, .profile-section p:hover {
     color: #F7B176;
     transform: scale(1.05);
     transition: 0.6s ease-in-out;
@@ -292,8 +293,8 @@ body {
 
 .back-img-container {
     position: absolute;
-    width: 72%;
-    height: 535px;
+    width: calc(0.75 * 100% - 40px);
+    height: calc(17.2vw + 300px);
     border-radius: 25px;
     overflow: hidden;
     display: flex;
@@ -325,13 +326,13 @@ body {
 }
 
 .title p {
-    font-size: 24px;
+    font-size: 1.8vw;
     font-weight: 600;
     width: 100%;
 }
 
 .line-br {
-    font-size: 40px;
+    font-size: 3.4vw;
     font-weight: 100;
     width: 0.2%;
 }
@@ -341,7 +342,7 @@ body {
 }
 
 .game-title p {
-    font-size: 20px;
+    font-size: 1.6vw;
     font-weight: bold;
 }
 
@@ -372,7 +373,7 @@ body {
 }
 
 .det-title p, .det p {
-    font-size: 22px;
+    font-size: 1.8vw;
     font-weight: normal;
     margin: 20px 0;
 }
@@ -399,7 +400,7 @@ body {
     background: linear-gradient(to bottom, rgb(246, 189, 189, 0.7), rgb(255, 230, 230, 0.7));
     -webkit-text-stroke: #FFB9B9 0.5px;
     paint-order: stroke fill;
-    font-size: 24px;
+    font-size: 2vw;
     height: 50px;
     font-weight: 600;
     cursor: pointer;

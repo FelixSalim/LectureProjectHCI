@@ -10,7 +10,7 @@ if (activeUser == -1) {
 } else {
     let username = accounts.userNames[activeUser]
     if (username.length > 5) {
-        username = username.substring(0, 5) + ".."
+        username = username.substring(0, 5) + "<br>.."
     }
     logRegSect.innerHTML = `
     <div class="profile-section">
@@ -19,6 +19,11 @@ if (activeUser == -1) {
     </div>
     <p>Logout</p>
     `
+
+    const user = document.querySelector(".profile-section > p")
+    user.addEventListener("click", () => {
+        document.location.href = "trans_history.html"
+    })
 
     const logout = document.querySelector(".log-reg-section > p")
     logout.addEventListener("click", () => {

@@ -265,7 +265,8 @@ body {
 .profile-section p {
     font-size: 18px;
     font-weight: bold;
-    cursor: default;
+    cursor: pointer;
+    text-align: center;
 }
 
 .log-reg-section > p {
@@ -273,7 +274,7 @@ body {
     cursor: pointer;
 }
 
-.log-reg-section > p:hover {
+.log-reg-section > p:hover, .profile-section p:hover {
     color: #F7B176;
     transform: scale(1.05);
     transition: 0.6s ease-in-out;
