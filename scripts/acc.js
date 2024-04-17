@@ -4,7 +4,7 @@ let accounts = {
     passwords : [],
     phones : [],
     emails : [],
-    trans : [],
+    trans : []
 }
 
 var activeUser = -1
@@ -24,6 +24,16 @@ function storeLocalStorage() {
 
 function loadLocalStorage() {
     accounts = JSON.parse(localStorage.getItem("acc"))
+    if (accounts == null) {
+        accounts = {
+            fullNames : [],
+            userNames : [],
+            passwords : [],
+            phones : [],
+            emails : [],
+            trans : []
+        }
+    }
 }
 
 function storeCurrentUser() {
