@@ -745,6 +745,10 @@ body {
     .footer-item:first-of-type {
         width: 40%;
     }
+
+    .banner-bg {
+        width: calc(100% - 40px);
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -764,7 +768,7 @@ body {
     }
 
     .log-reg-section {
-        width: 60%;
+        width: 50%;
         overflow: hidden;
         transition: 0.25s ease-in-out;
     }  
@@ -785,6 +789,17 @@ body {
     .ac-items img {
         width: 30%;
         margin: 0 15px;
+    }
+
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .game-descriptions {
+        font-size: 16px;
+        width: 45%;
+        gap: 8px;
     }
     
     .footer-item:first-of-type {

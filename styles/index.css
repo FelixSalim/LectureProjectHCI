@@ -659,7 +659,7 @@ body {
     }
 
     .log-reg-section {
-        width: 60%;
+        width: 50%;
         overflow: hidden;
         transition: 0.25s ease-in-out;
     }  
