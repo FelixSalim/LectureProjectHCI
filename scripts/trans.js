@@ -72,6 +72,37 @@ $(document).ready(() => {
     })
 })
 
+const showDashboard = document.querySelector(".dashboard-icon")
+const dashboard = document.querySelector(".dashboard-area")
+const dbContainer = document.querySelector(".dashboard-area-container")
+showDashboard.addEventListener("click", (e) => {
+    e.stopPropagation()
+    dashboard.classList.add("opened-db")
+    dbContainer.classList.add("opened")
+})
+
+function closeDB() {
+    dashboard.classList.remove("opened-db")
+    dbContainer.classList.remove("opened")
+}
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 821) {
+        closeDB()
+    } 
+})
+
+dbContainer.addEventListener("click", () => {
+    document.removeEventListener("click", closeDB)
+    setTimeout(() => {
+        document.addEventListener("click", closeDB)
+    }, 10)
+})
+
+const closeIcon = document.querySelector(".close-icon")
+closeIcon.addEventListener("click", closeDB)
+document.addEventListener("click", closeDB)
+
 const checkTrans = document.querySelectorAll(".check-trans")
 const contentWarning = document.querySelector(".content-warning")
 checkTrans.forEach((c) => {
@@ -80,11 +111,45 @@ checkTrans.forEach((c) => {
         e.stopPropagation()
         if (activeUser == -1) {
             contentWarning.classList.add("show-warning")
+            closeDB()
         } else {
             document.location.href = "trans_history.html"
         }
     })
 })
+
+const searchBox = document.querySelector(".search-box")
+const searchIcon = document.querySelector(".search-box img")
+const search = document.querySelector(".search-box input")
+searchIcon.addEventListener("click", () => {
+    if (window.innerWidth <= 500) {
+        search.classList.add("show-search")
+        logRegSect.classList.add("hide-sect")
+    }
+})
+
+function removeSearch() {
+    search.classList.remove("show-search")
+    logRegSect.classList.remove("hide-sect")
+    search.value = ""
+    document.querySelector(".auto-complete-items").innerHTML = ""
+    alreadyIn = []
+}
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 500) {
+        removeSearch()
+    }
+})
+
+searchBox.addEventListener("click", () => {
+    document.removeEventListener("click", removeSearch)
+    setTimeout(() => {
+        document.addEventListener("click", removeSearch)
+    }, 10)
+})
+
+document.addEventListener("click", removeSearch)
 
 const exit = document.querySelector(".exit-container img")
 const logWarn = document.querySelector(".login-warning")
