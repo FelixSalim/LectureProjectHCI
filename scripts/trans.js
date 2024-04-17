@@ -77,6 +77,7 @@ const dashboard = document.querySelector(".dashboard-area")
 const dbContainer = document.querySelector(".dashboard-area-container")
 showDashboard.addEventListener("click", (e) => {
     e.stopPropagation()
+    removeSearch()
     dashboard.classList.add("opened-db")
     dbContainer.classList.add("opened")
 })

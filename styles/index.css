@@ -11,6 +11,7 @@ html {
 
 body {
     background-color: #031335;
+    overflow-x: hidden;
 }
 
 .content-warning {
@@ -320,18 +321,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .banner-contents {
     width: 100%;
+    overflow: hidden;
 }
 
-.banner1 {
+.banner-track {
     width: 100%;
+    display: flex;
+    transition: 0.5s ease-in-out;
 }
 
-.banner1 img {
-    width: 100%;
+.banner-item img {
+    width: 75vw;
+    height: auto;
 }
 
 .selector {
@@ -575,6 +581,14 @@ body {
         z-index: 7;
         height: 100%;
         transition: 0.5s ease-in-out;
+    }
+
+    .banner-contents {
+        width: calc(100vw - 40px);
+    }
+
+    .banner-item img {
+        width: calc(100vw - 40px);
     }
 
     .opened {

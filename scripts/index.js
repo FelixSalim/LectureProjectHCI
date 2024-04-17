@@ -77,6 +77,7 @@ const dashboard = document.querySelector(".dashboard-area")
 const dbContainer = document.querySelector(".dashboard-area-container")
 showDashboard.addEventListener("click", (e) => {
     e.stopPropagation()
+    removeSearch()
     dashboard.classList.add("opened-db")
     dbContainer.classList.add("opened")
 })
@@ -167,6 +168,43 @@ logWarn.addEventListener("click", (e) => {
 
 document.addEventListener("click", removePopUp)
 exit.addEventListener("click", removePopUp)
+
+let curBanner = 0
+let prevTrigger = 0
+const bannerTrack = document.querySelector(".banner-track")
+const dots = document.querySelectorAll(".dots")
+
+function slide() {
+    dots.forEach((dot) => {
+        dot.classList.remove("active")
+    })
+    dots[curBanner].classList.add("active")
+    let slideDistance = ((window.innerWidth || document.documentElement.clientWidth) > 820) ? "75vw" : "calc(100vw - 40px)"
+    bannerTrack.style.transform = `translateX(calc(-${curBanner} * ${slideDistance}))`
+    prevTrigger = new Date().getTime()
+}
+
+dots.forEach((dot, idx) => {
+    dot.addEventListener("click", () => {
+        dots.forEach((dot, index) => {
+            if (idx != index) dot.classList.remove("active")
+        })
+        dot.classList.add("active")
+        curBanner = idx
+        slide()
+    })
+})
+
+setInterval(() => {
+    let curTrigger = new Date().getTime()
+    if (curTrigger - prevTrigger >= 5000) {
+        curBanner ++
+        if (curBanner > 2) {
+            curBanner = 0
+        }
+        slide()
+    }
+}, 2000)
 
 const selectors = document.querySelectorAll(".selection")
 const cards = document.querySelectorAll(".cards")
