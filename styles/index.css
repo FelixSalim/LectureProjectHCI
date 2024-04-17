@@ -317,7 +317,7 @@ body {
 
 .banner {
     width: 100%;
-    margin-top: 30px;
+    margin: 30px 0 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -584,7 +584,7 @@ body {
     }
 
     .banner-contents {
-        width: calc(100vw - 40px);
+        width: 100%;
     }
 
     .banner-item img {
@@ -601,7 +601,9 @@ body {
 
     .content-area {
         width: 100%;
-        margin: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        padding: 20px;
     }
 
     .dashboard-icon {
