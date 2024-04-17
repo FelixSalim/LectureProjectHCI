@@ -1,6 +1,11 @@
 loadLocalStorage()
 loadCurrentUser()
 
+const logo = document.querySelector(".logo")
+logo.addEventListener("click", () => {
+    document.location.href = "index.html"
+})
+
 const logRegSect = document.querySelector(".log-reg-section")
 if (activeUser == -1) {
     logRegSect.innerHTML = `
