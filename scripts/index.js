@@ -131,6 +131,9 @@ searchIcon.addEventListener("click", () => {
 function removeSearch() {
     search.classList.remove("show-search")
     logRegSect.classList.remove("hide-sect")
+    search.value = ""
+    document.querySelector(".auto-complete-items").innerHTML = ""
+    alreadyIn = []
 }
 
 window.addEventListener("resize", () => {

@@ -673,7 +673,7 @@ body {
     }  
     
     .show-search {
-        width: 70vw !important;
+        width: 55vw !important;
     }
 
     .hide-sect {
@@ -682,8 +682,13 @@ body {
     }
 
     .auto-complete-items {
-        width: 85vw;
-        transform: translateX(40px);
+        width: 70vw;
+        transform: translateX(55px);
+    }
+
+    .ac-items img {
+        width: 30%;
+        margin: 0 15px;
     }
 
     .game-list-selector {
