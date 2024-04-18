@@ -220,11 +220,20 @@ for (let i = 0; i < accounts.trans[activeUser].length; i++) {
     let transaction = accounts.trans[activeUser][i]
     trans.innerHTML += `
     <div class="trans-detail">
-        <p> ${transaction.transDate} </p>
-        <p> ${transaction.transID} </p>
-        <p> ${transaction.item} </p>
-        <p> ${transaction.ID} </p>
-        <p> Pending </p>
+        <div class="mobile-only">
+            <p> Tanggal </p>
+            <p> Invoice </p>
+            <p> Produk  </p>
+            <p> ID/No </p>
+            <p> Status </p>
+        </div>
+        <div class="detail-items">
+            <p> ${transaction.transDate} </p>
+            <p> ${transaction.transID} </p>
+            <p> ${transaction.item} </p>
+            <p> ${transaction.ID} </p>
+            <p> Pending </p>
+        </div>
     </div>
     `
 }

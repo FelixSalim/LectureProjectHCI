@@ -353,17 +353,21 @@ body {
 }
 
 .main p {
+    width: 45%;
     font-size: 2vw;
     font-weight: bold;
     cursor: default;
 }
 
 .details {
-    width: 60%;
+    width: 63%;
     box-sizing: border-box;
     padding: 1.3vw 2.6vw;
     border-radius: 25px;
-    background: linear-gradient(to bottom, #7381D5, #535C91)
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #7381D5, #535C91);
+    justify-content: center;
 }
 
 .detail {
@@ -429,37 +433,49 @@ body {
     width: 10%;
 }
 
+.mobile-only {
+    display: none;
+}
+
 .trans-detail {
+    width: 100%;
+    border-bottom: 2px solid #535C91;
+}
+
+.detail-items {
     width: 100%;
     display: flex;
     justify-content: space-around;
     height: 40px;
     align-items: center;
-    border-bottom: 2px solid #535C91;
 }
 
-.trans-detail p {
+.detail-items p {
     font-size: 14px;
     text-align: center;
 }
 
-.trans-detail p:first-of-type {
+.detail-items p:first-of-type {
+    font-size: 12px;
+}
+
+.detail-items p:first-of-type {
     width: 15%;
 }
 
-.trans-detail p:nth-of-type(2) {
+.detail-items p:nth-of-type(2) {
     width: 20%;
 }
 
-.trans-detail p:nth-of-type(3) {
+.detail-items p:nth-of-type(3) {
     width: 30%;
 }
 
-.trans-detail p:nth-of-type(4) {
+.detail-items p:nth-of-type(4) {
     width: 15%;
 }
 
-.trans-detail p:last-of-type {
+.detail-items p:last-of-type {
     width: 10%;
     border-radius: 25px;
     color: black;
@@ -615,7 +631,7 @@ body {
 
 .socials {
     display: flex;
-    width: 60%;
+    width: 180px;
     justify-content: space-between;
 }
 
@@ -701,6 +717,79 @@ body {
         width: 50%;
     }
 
+    .profile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-sizing: content-box;
+    }
+
+    .main, .details {
+        width: 95%;
+    }
+
+    .main p {
+        font-size: 6vw;
+    }
+
+    .details {
+        padding: 10px 20px;
+    }
+
+    .detail p {
+        width: 40%;
+        font-size: 3.4vw;
+        line-height: 5vw;
+    }
+
+    .transactions {
+        padding: 20px;
+    }
+
+    .transaction-title {
+        height: 70px;
+    }
+
+    .transaction-title p {
+        font-size: 22px;
+    }
+    
+    .transaction-title p:nth-of-type(3) {
+        width: 18%;
+    }
+    
+    .transaction-title p:nth-of-type(4) {
+        width: 21%;
+    }
+    
+    .transaction-title p:last-of-type {
+        width: 16%;
+    }
+
+    .detail-items {
+        height: 70px;
+    }
+
+    .detail-items p {
+        font-size: 18px;
+    }
+
+    .detail-items p:first-of-type {
+        font-size: 16px;
+    }
+
+    .detail-items p:nth-of-type(3) {
+        width: 18%;
+    }
+    
+    .detail-items p:nth-of-type(4) {
+        width: 21%;
+    }
+    
+    .detail-items p:last-of-type {
+        width: 16%;
+    }
+
     .footer-item:first-of-type {
         width: 40%;
     }
@@ -745,7 +834,93 @@ body {
         width: 30%;
         margin: 0 15px;
     }
-    
+
+    .profile {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .main p {
+        font-size: 7vw;
+    }
+
+    .detail p {
+        font-size: 4.2vw;
+        line-height: 6vw;
+        width: 50%;
+    }
+
+    .transactions {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .transaction-title {
+        display: none;
+    }
+
+    .transaction-details {
+        width: 100%;
+    }
+
+    .trans-detail {
+        width: 100%;
+        display: flex;
+    }
+
+    .mobile-only {
+        display: flex;
+        flex-direction: column;
+        height: 180px;
+        justify-content: space-around;
+        width: 25%;
+    }
+
+    .mobile-only p {
+        font-size: 14px;
+    }
+
+    .transaction-title-mobile {
+        width: 100%;
+        background: #4C2BD2;
+        border-radius: 25px;
+        height: 70px;
+        align-items: center;
+    }
+
+    .transaction-title-mobile p {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .detail-items {
+        flex-direction: column;
+        height: 180px;
+        width: 70%;
+    }
+
+    .trans-detail {
+        border-bottom: none;
+        background-color: #4C2BD2;
+        margin: 10px 0;
+        border-radius: 25px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .detail-items p {
+        width: 100% !important;
+        font-size: 14px !important;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .detail-items p:last-of-type {
+        text-align: center;
+        padding-left: 0;
+    }
+
     .footer-item:first-of-type {
         width: 100%;
         margin: 10px 0;
