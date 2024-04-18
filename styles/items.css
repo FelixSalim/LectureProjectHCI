@@ -429,8 +429,6 @@ body {
     margin: 1px 0;
     color: black;
     font-size: 14px;
-    -webkit-text-stroke: #FFB9B9 0.5px;
-    paint-order: stroke fill;
     text-align: center;
 }
 
@@ -496,8 +494,6 @@ body {
 .methods p {
     color: black;
     font-size: 14px;
-    -webkit-text-stroke: #FFB9B9 0.5px;
-    paint-order: stroke fill;
 }
 
 .dropicon-container {
