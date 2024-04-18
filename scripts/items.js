@@ -1,9 +1,11 @@
 loadLocalStorage()
 loadCurrentUser()
 
-const logo = document.querySelector(".logo")
-logo.addEventListener("click", () => {
-    document.location.href = "index.html"
+const logo = document.querySelectorAll(".logo img, .logo p")
+logo.forEach((e) => {
+    e.addEventListener("click", () => {
+        document.location.href = "index.html"
+    })
 })
 
 const logRegSect = document.querySelector(".log-reg-section")
