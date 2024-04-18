@@ -306,7 +306,7 @@ methodItems.forEach((item, index) => {
     item.addEventListener("click", (e) => {
         e.stopPropagation()
         methodItems.forEach((it, idx) => {
-            if (idx != index) it.classList.remove("selected-item")
+            if (idx != index) it.classList.remove("selected-method")
         })
         item.classList.toggle("selected-method")
     })

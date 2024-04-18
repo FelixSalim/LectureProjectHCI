@@ -751,6 +751,10 @@ body {
         width: 100%;
     }
 
+    .content-title {
+        margin-top: 20px;
+    }
+
     .dropdown-item img  {
         width: 15%;
     }
