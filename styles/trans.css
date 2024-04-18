@@ -317,7 +317,7 @@ body {
 
 .content {
     width: 100%;
-    margin: 30px 0;
+    margin: 30px 0 50px 0;
     border-radius: 25px;
     border: 3px solid #535C91;
     background-color: #1B1A55;
@@ -345,7 +345,7 @@ body {
 
 .details-title {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 95%;
     height: 80px;
@@ -356,12 +356,12 @@ body {
 }
 
 .title {
+    margin-left: 20px;
     width: 25%;
-    margin-left: 30px;
 }
 
 .title p {
-    font-size: 1.8vw;
+    font-size: 1.9vw;
     font-weight: 600;
     width: 100%;
 }
@@ -369,7 +369,7 @@ body {
 .line-br {
     font-size: 3.4vw;
     font-weight: 100;
-    width: 0.2%;
+    margin: 0 10px;
 }
 
 .game-title {
@@ -377,7 +377,7 @@ body {
 }
 
 .game-title p {
-    font-size: 1.6vw;
+    font-size: 1.8vw;
     font-weight: bold;
 }
 
@@ -408,7 +408,7 @@ body {
 }
 
 .det-title p, .det p {
-    font-size: 1.8vw;
+    font-size: 2vw;
     font-weight: normal;
     margin: 20px 0;
 }
@@ -605,6 +605,31 @@ body {
         width: 50%;
     }
 
+    .back-img-container {
+        width: calc(100% - 40px);
+        height: calc(21.7vw + 310px);
+    }
+
+    .title p {
+        font-size: 2.6vw;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .line-br {
+        font-size: 4vw;
+    }
+    
+    .game-title p {
+        font-size: 2.6vw;
+        font-weight: bold;
+    }
+    .det-title p, .det p {
+        font-size: 2.6vw;
+        font-weight: normal;
+        margin: 20px 0;
+    }
+
     .footer-item:first-of-type {
         width: 40%;
     }
@@ -649,7 +674,43 @@ body {
         width: 30%;
         margin: 0 15px;
     }
+
+    .back-img-container {
+        height: calc(113vw + 390px);
+    }
+
+    .back-img-container img {
+        height: 100%;
+    }
+
+    .line-br, .game-title {
+        display: none;
+    }
+
+    .title {
+        width: 100%;
+    }
     
+    .title p {
+        font-size: 4.5vw;
+    }
+
+    .details {
+        flex-direction: column-reverse;
+    }
+
+    .details-left, .details-right {
+        width: 100%;
+    }
+
+    .pay-btn {
+        font-size: 3.5vw;
+    }
+
+    .det-title p, .det p {
+        font-size: 3vw;
+    }
+
     .footer-item:first-of-type {
         width: 100%;
         margin: 10px 0;

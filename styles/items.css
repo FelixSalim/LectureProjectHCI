@@ -743,6 +743,26 @@ body {
         width: 50%;
     }
 
+    .content { 
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .dropdown-item img  {
+        width: 15%;
+    }
+
+    .dropicon-container {
+        width: calc(100% - 100px);
+    }
+
     .footer-item:first-of-type {
         width: 40%;
     }
@@ -760,6 +780,10 @@ body {
 
     .opened {
         width: 80%;
+    }
+
+    .dropdown-item img  {
+        width: 25%;
     }
 
     .search-box input {
@@ -798,9 +822,17 @@ body {
     }
 
     .game-descriptions {
-        font-size: 16px;
+        font-size: 14px;
         width: 45%;
         gap: 8px;
+    }
+
+    .nominals div {
+        flex: 1 1 40%;
+    }
+
+    .nominals div p {
+        font-size: 12px !important;
     }
     
     .footer-item:first-of-type {
