@@ -24,7 +24,7 @@ body {
     min-height: 100%;
     min-width: 40%;
     max-width: 40%;
-    background-image:  linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
+    background-image: linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
     background-size: cover;
     background-position: 50%;
 }
@@ -195,4 +195,16 @@ input:focus + label {
     color: red;
     font-weight: 600;
     font-size: 1em;
+}
+
+@media only screen and (max-width: 480px) {
+    .banner {
+        min-width: 0;
+        max-width: 0;
+    }
+
+    .register-form {
+        min-width: 80vw;
+        max-width: 80vw;
+    }
 }

@@ -206,3 +206,15 @@ label {
 .form-section input:focus + label {
     color: #f7caee;
 }
+
+@media only screen and (max-width: 480px) {
+    .banner {
+        min-width: 0;
+        max-width: 0;
+    }
+
+    .login-form {
+        min-width: 80vw;
+        max-width: 80vw;
+    }
+}
