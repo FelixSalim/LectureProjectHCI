@@ -92,7 +92,7 @@ img {
 .register-label {
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 11px;
     font-weight: 500;
     transition: top 0.3s, font-size 0.3s;
 }
