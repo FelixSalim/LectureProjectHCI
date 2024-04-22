@@ -94,7 +94,8 @@ body {
 
 .content-area {
     width: 75%;
-    margin: 30px;
+    box-sizing: border-box;
+    padding: 30px;
 }
 
 .dashboard-area div p {
@@ -370,7 +371,7 @@ body {
 }
 
 .game-list-selector {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
