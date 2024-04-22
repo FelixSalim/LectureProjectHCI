@@ -8,6 +8,7 @@ body {
     color: white;
     font-family: "Raleway", sans-serif;
     font-size: 1em;
+    min-height: 100vh;
 }
 
 input, button {
@@ -26,7 +27,7 @@ img {
 
 .login {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     align-items: center;
 }
