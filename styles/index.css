@@ -338,7 +338,7 @@ body {
 }
 
 .banner-item img {
-    width: 75vw;
+    width: calc(75vw - 60px);
     height: auto;
 }
 

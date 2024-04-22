@@ -186,7 +186,7 @@ function slide() {
         dot.classList.remove("active")
     })
     dots[curBanner].classList.add("active")
-    let slideDistance = ((window.innerWidth || document.documentElement.clientWidth) > 820) ? "75vw" : "calc(100vw - 40px)"
+    let slideDistance = ((window.innerWidth || document.documentElement.clientWidth) > 820) ? "calc(75vw - 60px)" : "calc(100vw - 40px)"
     bannerTrack.style.transform = `translateX(calc(-${curBanner} * ${slideDistance}))`
     prevTrigger = new Date().getTime()
 }
