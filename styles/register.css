@@ -8,6 +8,7 @@ body {
     color: white;
     font-family: "Raleway", sans-serif;
     font-size: 1em;
+    min-height: 100vh;
 }
 
 input, button {
@@ -26,7 +27,7 @@ img {
 
 .register {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     align-items: center;
 }
@@ -62,6 +63,7 @@ img {
     padding: 2.5rem 1.5rem;
     border-radius: 1rem;
     backdrop-filter: blur(8px);
+    margin: 2rem auto;
 }
 
 .register-title {
@@ -210,4 +212,8 @@ img {
     .register-title {
         font-size: 2rem;
     }
+}
+
+@media screen and(min-width: 900px) {
+
 }
