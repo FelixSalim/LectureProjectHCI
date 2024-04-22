@@ -1,189 +1,122 @@
 * {
-    margin: 0;
     padding: 0;
-    font-family: "Raleway", sans-serif;
-    color: white;
+    margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    background-color: #031335;
-}
-
-.container {
-    display: flex;
-    min-height: 100vh;
-}   
-
-.banner {
-    z-index: -1;
-    min-height: 100%;
-    min-width: 40%;
-    max-width: 40%;
-    background-image: linear-gradient(to right,rgba(3, 19, 53, 0) 0%,rgba(3, 19, 53, 1) 100%), url(../assets/images/register-banner.jpg);
-    background-size: cover;
-    background-position: 50%;
-}
-
-.register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem;
-    width: 100%;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-#back {
-    width: 20%;
-}
-
-#back {
-    cursor: pointer;
-}
-
-.title {
-    width: 100%;
-}
-
-
-h1 {
-    width: 100%;
-    font-size: 3em;
-}
-
-h2 {
-    margin-top: 0.5rem;
+    color: white;
+    font-family: "Raleway", sans-serif;
     font-size: 1em;
-    color: rgba(255, 255, 255, 0.5);
 }
 
-.register-form {
-    margin-top: 1.5rem;
-    background-color: #535C91;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    border-radius: 50px;
-    min-width: 40vw;
-    max-width: 40vw;
+input, button {
+    border: none;
+    outline: none;
 }
 
-.form-section {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 5rem;
-    justify-content: space-around;
-    margin-bottom: 1rem;
+a {
+    text-decoration: none;
 }
 
-.pass-form-section {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.pass-form-section input {
-    width: 100%;
-}
-
-.see {
-    position: absolute;
-    width: 4%;
+img {
+    max-width: 100%;
     height: auto;
 }
 
-.form-button {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.button {
-    border-radius: 10px;
-    padding: 1rem 0; 
-    width: 50%;
-    background-color: white;
-    color: black;
-    font-size: 1.2em;
-    font-weight: 600;
-    border: none;
-}
-
-.button:hover {
-    background-color: #f7caee;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.form-extra {
-    display: flex;
-    margin-top: 1rem;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.form-extra>p {
+.register {
     position: relative;
-    top:1rem;
-    margin-top: 1rem;
-}
-
-.login-text {
-    display: flex;
-    justify-content: center;
+    height: 100vh;
+    display: grid;
     align-items: center;
 }
 
-.login-link {
-    margin-left: 0.2rem;
-    text-decoration: underline;
-    font-weight: 700;
+.register-banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.login-link:hover {
+.register-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+#back {
+    font-size: 2rem;
+}
+
+#back:hover {
     cursor: pointer;
-    color: #f7caee;
 }
 
-label {
-    font-weight: 600;
+.register-container {
+    position: relative;
+    background-color: hsla(0, 0%, 10%, .1);
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
 }
 
-input {
-    color: black;
-    border-radius: 10px;
-    padding: calc(0.5rem + 3px);
-    padding-left: 1em !important;
-    border: none;
-    font-size: 1.2em;
-    background-color: rgb(245, 245, 245);
-    box-shadow: 1px 1px 3px 0px rgba(247, 202, 238,0.8);
+.register-title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
 }
 
-input:focus {
-    background-color: white;
-    padding: 0.5rem;
-    outline: none;
-    color: #535c91;
-    border: 3px #f7caee solid;
+.register-form, .register-box {
+    display: grid;
 }
 
-input:focus + label {
-    color: #f7caee;
+.register-form {
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.register-box {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: 0.75rem;
+    border-bottom: 2px solid white;
+}
+
+.register-icon, .register-eye {
+    font-size: 1.25em;
+}
+
+.register-input {
+    width: 100%;
+    padding-block: 0.8rem;
+    background: none;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.register-box-input {
+    position: relative;
+}
+
+.register-label {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    font-weight: 500;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.register-eye {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .error-msg {
@@ -197,14 +130,84 @@ input:focus + label {
     font-size: 1em;
 }
 
-@media only screen and (max-width: 480px) {
-    .banner {
-        min-width: 0;
-        max-width: 0;
-    }
+.register-box:nth-child(2) input {
+    padding-right: 1.8rem;
+}
 
-    .register-form {
-        min-width: 80vw;
-        max-width: 80vw;
+.register-check, .register-check-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.register-check {
+    margin-bottom: 1.5rem;
+}
+
+.register-check-label, .register-forgot {
+    font-size: 0.75em;
+}
+
+.register-check-group {
+    column-gap: 0.5rem;
+}
+
+.register-check-input {
+    width: 16px;
+    height: 16px;
+}
+
+.register-forgot {
+    color: white;
+}
+
+.register-forgot:hover {
+    text-decoration: underline;
+}
+
+.register-button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.register-login {
+    text-align: center;
+}
+
+.register-login a {
+    color: white;
+    font-weight: 500;
+}
+
+.register-login a:hover {
+    text-decoration: underline;
+}
+
+.register-input:focus + .register-label {
+    top: -12px;
+    font-size: 0.75em;
+}
+
+.register-input:not(:placeholder-shown).register-input:not(:focus) + .register-label{
+    top: -12px;
+    font-size: 0.75em;
+}
+
+@media screen and (min-width: 576px) {
+    .register {
+        justify-content: center;
+    }
+    .register-container {
+        width: 432px;
+        padding: 4rem 3rem 3.5rem;
+        border-radius: 1.5rem;
+    }
+    .register-title {
+        font-size: 2rem;
     }
 }

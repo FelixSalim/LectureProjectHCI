@@ -1,3 +1,23 @@
+const showHiddenPass = (registerPass, registerEye) => {
+    const input = document.getElementById(registerPass);
+    const iconEye = document.getElementById(registerEye);
+
+    iconEye.addEventListener('click', () => {
+        if(input.type === 'password') {
+            input.type = 'text';
+            iconEye.classList.remove('ri-eye-off-line');
+            iconEye.classList.add('ri-eye-line');
+        } else {
+            input.type = 'password';
+            iconEye.classList.remove('ri-eye-line');
+            iconEye.classList.add('ri-eye-off-line');
+        }
+    })
+}
+
+showHiddenPass('register-pass', 'register-eye')
+showHiddenPass('register-pass-conf', 'register-eye-conf')
+
 loadLocalStorage()
 
 let back = document.querySelector('#back');
@@ -6,7 +26,7 @@ back.addEventListener('click', () => {
     location.href = "index.html";
 })
 
-const pw = [document.getElementById("password"), document.getElementById("conf-password")]
+const pw = [document.getElementById("register-pass"), document.getElementById("register-pass-conf")]
 const see = document.querySelectorAll(".see")
 see.forEach((s, i) => {
     s.addEventListener("click", () => {
@@ -18,7 +38,7 @@ see.forEach((s, i) => {
     })
 })
 
-const btn = document.querySelector(".button")
+const btn = document.querySelector(".register-button")
 const error = document.querySelector(".error")
 
 btn.addEventListener("click", (e) => {
@@ -27,8 +47,8 @@ btn.addEventListener("click", (e) => {
     let userName = document.getElementById("username").value
     let phoneNumber = document.getElementById("phone").value
     let email = document.getElementById("email").value
-    let password = document.getElementById("password").value
-    let confPassword = document.getElementById("conf-password").value
+    let password = document.getElementById("register-pass").value
+    let confPassword = document.getElementById("register-pass-conf").value
     if (fullName.length == 0 || userName.length == 0 || phoneNumber.length == 0 || email.length == 0 || password.length == 0 || confPassword.length == 0) {
         error.innerHTML = "Semua data harus diisi!"
         return

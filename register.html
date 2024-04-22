@@ -1,80 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wendigg Revamp Store</title>
-    <link rel="stylesheet" href="./styles/register.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />      
+        <link rel="stylesheet" href="./styles/register.css" />
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="register">
+            <img
+                src="./assets/images/register-banner.jpg"
+                alt="register image"
+                class="register-banner"
+            />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main class="container">
-        <div class="banner"></div>
-        <section class="register">
-            <header class="header">
-                <div class="title">
-                    <h1>Create an Account</h1>
-                    <h2>Please fill in your data</h2>
+            <form action="" class="register-container">
+                <div class="register-header">
+                    <i class="ri-arrow-left-line" id="back"></i>
+                    <h1 class="register-title">Register</h1>
+                    <div class="empty"></div>
                 </div>
-                <img id="back" src="./assets/images/back-arrow.svg" alt="back" srcset="">
-            </header>
-            <form class="register-form">
-                <div class="form-section">
-                    <input type="text" id="name">
-                    <label for="name" class="label">Full Name</label>
-                </div>
+                <div class="register-form">
+                    <div class="register-box">
+                        <i class="ri-account-circle-line register-icon"></i>
 
-                <div class="form-section">    
-                    <input type="text" id="username">
-                    <label for="username" class="label">Username</label>
-                </div>
-
-                <div class="form-section">    
-                    <input type="text" id="phone">
-                    <label for="phone" class="label">Phone Number</label>
-                </div>
-
-                <div class="form-section">
-                    <input type="email" id="email">
-                    <label for="email" class="label">Email</label>
-                </div>
-
-                <div class="form-section">
-                    <div class="pass-form-section">
-                        <input type="password" id="password">
-                        <img src="assets/images/see.png" alt="" class="see">
-                    </div> 
-                    <label for="password" class="label">Password</label>
-                </div>
-
-                <div class="form-section">   
-                    <div class="pass-form-section">
-                        <input type="password" id="conf-password">
-                        <img src="assets/images/see.png" alt="" class="see">
+                        <div class="register-box-input">
+                            <input
+                                type="text"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="name"
+                            />
+                            <label for="" class="register-label"
+                                >Full Name</label
+                            >
+                        </div>
                     </div>
-                    <label for="conf-password" class="label">Confirm Password</label>
-                </div>
-                <div class="error-msg">
-                    <p class="error"></p>
-                </div>
-                <div class="form-button">
-                    <button class="button">Sign Up</button>
-                </div>
-                <div class="form-extra">
-                    <div class="login-text">
-                        <p>Already have an account?</p>
-                        <a class="login-link" href="login.html">Login now</a>
+
+                    <div class="register-box">
+                        <i class="ri-user-line register-icon"></i>
+
+                        <div class="register-box-input">
+                            <input
+                                type="text"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="username"
+                            />
+                            <label for="" class="register-label"
+                                >Username</label
+                            >
+                        </div>
                     </div>
-                    <p>&copy 2024 PT. WENDIGG DIGITAL SOLUTION</p>
+
+                    <div class="register-box">
+                        <i class="ri-phone-line register-icon"></i>
+
+                        <div class="register-box-input">
+                            <input
+                                type="phone"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="phone"
+                            />
+                            <label for="" class="register-label"
+                                >Phone Number</label
+                            >
+                        </div>
+                    </div>
+
+                    <div class="register-box">
+                        <i class="ri-mail-line register-icon"></i>
+
+                        <div class="register-box-input">
+                            <input
+                                type="email"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="email"
+                            />
+                            <label for="" class="register-label">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="register-box">
+                        <i class="ri-lock-2-line register-icon"></i>
+
+                        <div class="register-box-input">
+                            <input
+                                type="password"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="register-pass"
+                            />
+                            <label for="" class="register-label"
+                                >Password</label
+                            >
+                            <i
+                                class="ri-eye-off-line register-eye"
+                                id="register-eye"
+                            ></i>
+                        </div>
+                    </div>
+
+                    <div class="register-box">
+                        <i class="ri-lock-password-line register-icon"></i>
+
+                        <div class="register-box-input">
+                            <input
+                                type="password"
+                                required
+                                class="register-input"
+                                placeholder=""
+                                id="register-pass-conf"
+                            />
+                            <label for="" class="register-label"
+                                >Confirm Password</label
+                            >
+                            <i
+                                class="ri-eye-off-line register-eye"
+                                id="register-eye-conf"
+                            ></i>
+                        </div>
+                    </div>
+                    <div class="error-msg">
+                        <p class="error"></p>
+                    </div>
                 </div>
+                <button class="register-button">Register</button>
+                <p class="register-login">
+                    Already an account? <a href="login.html">Login</a>
+                </p>
             </form>
-        </section>
-    </main>
-    <script src="scripts/acc.js"></script>
-    <script src="scripts/register.js"></script>
-</body>
+        </div>
+        <script src="scripts/acc.js"></script>
+        <script src="/scripts/register.js"></script>
+    </body>
 </html>

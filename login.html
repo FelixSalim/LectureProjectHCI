@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wendigg Revamp Store</title>
-    <link rel="stylesheet" href="./styles/login.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />      
+        <link rel="stylesheet" href="/styles/login.css" />
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="login">
+            <img
+                src="./assets/images/login-banner.jpg"
+                alt="login image"
+                class="login-banner"
+            />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main class="container">
-        <div class="banner"></div>
-        <section class="login">
-            <header class="header">
-                <div class="title">
-                    <h1>Sign In To Your Account</h1>
-                    <h2>Please fill in your data</h2>
+            <form action="" class="login-container">
+                <div class="login-header">
+                    <i class="ri-arrow-left-line" id="back"></i>
+                    <h1 class="login-title">Login</h1>
+                    <div class="empty"></div>
                 </div>
-                <img id="back" src="./assets/images/back-arrow.svg" alt="back" srcset="">
-            </header>
-            <form class="login-form">
-                <div class="form-section">    
-                    <input type="text" id="username">
-                    <label for="username" class="label">Username</label>
-                </div>
-                
-                <div class="form-section">   
-                    <div class="pass-form-section">
-                        <input type="password" id="password">
-                        <img src="assets/images/see.png" alt="" class="see">
+                <div class="login-form">
+                    <div class="login-box">
+                        <i class="ri-user-line login-icon"></i>
+
+                        <div class="login-box-input">
+                            <input
+                                type="text"
+                                required
+                                class="login-input"
+                                placeholder=""
+                                id="username"
+                            />
+                            <label for="" class="login-label"
+                                >Username</label
+                            >
+                        </div>
                     </div>
-                    <label for="password" class="label">Password</label>
-                </div>  
 
-                <div class="login-extra">
-                    <div class="remember-check">
-                        <input type="checkbox" id="remember">
-                        <label for="remember" class="label">Remember me</label>
+                    <div class="login-box">
+                        <i class="ri-lock-2-line login-icon"></i>
+
+                        <div class="login-box-input">
+                            <input
+                                type="password"
+                                required
+                                class="login-input"
+                                placeholder=""
+                                id="login-pass"
+                            />
+                            <label for="" class="login-label"
+                                >Password</label
+                            >
+                            <i
+                                class="ri-eye-off-line login-eye"
+                                id="login-eye"
+                            ></i>
+                        </div>
                     </div>
-                    <a href="" class="forget-link">Forgot password?</a>
-                </div>
-
-                <div class="error-msg">
-                    <p class="error"></p>
-                </div>
-
-                <div class="form-button">
-                    <button class="button">Sign In</button>
-                </div>
-                <div class="form-extra">
-                    <div class="register-text">
-                        <p>Don't have an account?</p>
-                        <a class="register-link" href="register.html">Register now</a>
+                    <div class="error-msg">
+                        <p class="error"></p>
                     </div>
-                    <p>&copy 2024 PT. WENDIGG DIGITAL SOLUTION</p>
                 </div>
+                <div class="login-check">
+                    <div class="login-check-group">
+                        <input type="checkbox" class="login-check-input" />
+                        <label for="" class="login-check-label"
+                            >Remember me</label
+                        >
+                    </div>
+                    <a href="#" class="login-forgot">Forgot Password?</a>
+                </div>
+                <button class="login-button">Login</button>
+                <p class="login-register">
+                    Don't have an account? <a href="register.html">Register</a>
+                </p>
             </form>
-        </section>
-    </main>
-    <script src="scripts/acc.js"></script>
-    <script src="scripts/login.js"></script>
-</body>
+        </div>
+        <script src="scripts/acc.js"></script>
+        <script src="./scripts/login.js"></script>
+    </body>
 </html>
