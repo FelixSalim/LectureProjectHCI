@@ -634,8 +634,8 @@ body {
     }
 
     .card {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 
     .card p {
@@ -647,12 +647,12 @@ body {
     }
 
     .front-img {
-        width: calc(0.6 * 250px);
+        width: calc(0.6 * 220px);
     }
 
     .back-img {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 
     .footer-item:first-of-type {
