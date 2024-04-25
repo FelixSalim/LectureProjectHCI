@@ -36,12 +36,12 @@ body {
 
 .show-warning {
     display: flex;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
     z-index: 10;
 }
 
 .login-warning {
-    width: 300px;
+    width: 500px;
     height: 250px;
     background-color: #535C91;
     display: flex;
