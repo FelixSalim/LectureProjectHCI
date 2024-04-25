@@ -17,7 +17,7 @@ if (activeUser == -1) {
 } else {
     let username = accounts.userNames[activeUser]
     if (username.length > 5) {
-        username = username.substring(0, 5) + "<br>.."
+        username = username.substring(0, 5) + ".."
     }
     logRegSect.innerHTML = `
     <div class="profile-section">

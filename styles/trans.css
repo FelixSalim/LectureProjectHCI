@@ -232,7 +232,7 @@ body {
 .auto-complete-items {
     position: absolute;
     z-index: 10;
-    width: calc(0.95 * 0.75 * 0.7 * 95%);
+    width: calc(0.7 * 0.75 * 100% - 40px);
 }
 
 .ac-items { 
@@ -276,7 +276,7 @@ body {
 
 .log-reg-section a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .log-reg-section a:hover {
@@ -298,14 +298,14 @@ body {
 }
 
 .profile-section p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
 }
 
 .log-reg-section > p {
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -573,6 +573,10 @@ body {
         z-index: 7;
         height: 100%;
         transition: 0.5s ease-in-out;
+    }
+
+    .auto-complete-items {
+        transform: translateX(13vw);
     }
 
     .opened {
