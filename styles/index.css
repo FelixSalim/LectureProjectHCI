@@ -234,7 +234,7 @@ body {
 .auto-complete-items {
     position: absolute;
     z-index: 10;
-    width: calc(0.95 * 0.75 * 0.7 * 95%);
+    width: calc(0.7 * 0.75 * 100% - 40px);
 }
 
 .ac-items { 
