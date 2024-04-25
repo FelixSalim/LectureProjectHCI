@@ -286,7 +286,7 @@ body {
 }
 
 .log-reg-section img {
-    width: 48%;
+    width: 40%;
     border-radius: 100%;
 }
 
@@ -294,14 +294,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 45%;
+    width: 60%;
 }
 
 .profile-section p {
+    width: 50%;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
 }
 
 .log-reg-section > p {
