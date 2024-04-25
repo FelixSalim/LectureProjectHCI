@@ -585,6 +585,10 @@ body {
         transition: 0.5s ease-in-out;
     }
 
+    .auto-complete-items {
+        transform: translateX(13vw);
+    }
+
     .banner-contents {
         width: 100%;
     }
