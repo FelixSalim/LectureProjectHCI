@@ -416,7 +416,7 @@ body {
 
 .nominals div {
     flex: 1 1 25%;
-    height: 70px;
+    height: 130px;
     margin: 10px 10px;
     border-radius: 25px;
     background: linear-gradient(to bottom, #DCB4B5, #FFE6E6);
@@ -425,6 +425,11 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.nominals div img {
+    width: 20%;
+    margin: 10px 0;
 }
 
 .nominals div p {
@@ -761,6 +766,10 @@ body {
         margin-top: 20px;
     }
 
+    .nominals div img {
+        width: 30%;
+    }
+
     .dropdown-item img  {
         width: 20%;
     }
@@ -843,6 +852,10 @@ body {
 
     .nominals div p {
         font-size: 12px !important;
+    }
+
+    .nominals div img {
+        width: 40%;
     }
 
     .dropdown-item img {
