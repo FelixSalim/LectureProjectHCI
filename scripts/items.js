@@ -229,7 +229,6 @@ if(type == "game") {
         nominals.innerHTML += `
         <div class="nominal-cards"> 
             <p>Weekly Diamond Pass</p>
-            <img src="assets/images/game-item-icon.png">
             <p>Rp26.982</p>
         </div>
         `
@@ -240,7 +239,6 @@ if(type == "game") {
         nominals.innerHTML += `
         <div class="nominal-cards"> 
             <p>MLBB Gift Card $5</p>
-            <img src="assets/images/game-item-icon.png">
             <p>Rp66.200</p>
         </div>
         `
@@ -251,7 +249,6 @@ if(type == "game") {
         nominals.innerHTML += `
         <div class="nominal-cards"> 
             <p>Pulsa 10.000</p>
-            <img src="assets/images/pulsa-item-icon.png">
             <p>Rp10.519</p>
         </div>
         `
@@ -262,7 +259,6 @@ if(type == "game") {
         nominals.innerHTML += `
         <div class="nominal-cards"> 
             <p>Gopay Customer 10.000</p>
-            <img src="assets/images/eWallet-item-icon.png">
             <p>Rp10.525</p>
         </div>
         `
