@@ -370,16 +370,17 @@ body {
 .content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 20px;
 }
 
 .left-content {
-    width: 65%;
+    width: 100%;
 }
 
 .right-content {
-    width: 30%;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .content-title {
@@ -415,7 +416,7 @@ body {
 
 .nominals div {
     flex: 1 1 25%;
-    height: 70px;
+    height: 130px;
     margin: 10px 10px;
     border-radius: 25px;
     background: linear-gradient(to bottom, #DCB4B5, #FFE6E6);
@@ -424,6 +425,11 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.nominals div img {
+    width: 20%;
+    margin: 10px 0;
 }
 
 .nominals div p {
@@ -450,7 +456,7 @@ body {
 .account-details p {
     font-weight: bold;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .account-details input {
@@ -480,7 +486,7 @@ body {
 }
 
 .methods:has(.active-dropdown) {
-    height: 260px;
+    height: 350px;
 }
 
 .methods:has(.active-dropdown) .dropicon-container {
@@ -502,7 +508,7 @@ body {
     height: 50px;
     box-sizing: border-box;
     padding: 20px;
-    width: calc(0.3 * 0.7 * 100% - 50px);
+    width: calc(75% - 100px);
     display: flex;
     justify-content: end;
     align-items: end;
@@ -528,7 +534,7 @@ body {
 }
 
 .active-dropdown {
-    height: 200px;
+    height: 300px;
 }
 
 .dropdown-item {
@@ -537,13 +543,13 @@ body {
     width: 100%;
     background-color: white;
     border-radius: 25px;
-    min-height: 80px;
+    min-height: 130px;
     margin: 10px 0;
     cursor: pointer;
 }
 
 .dropdown-item img {
-    width: 40%;
+    width: 15%;
     border-radius: 15px;
     margin: 0 10px;
 }
@@ -760,8 +766,16 @@ body {
         margin-top: 20px;
     }
 
+    .nominals div img {
+        width: 30%;
+    }
+
     .dropdown-item img  {
-        width: 15%;
+        width: 20%;
+    }
+
+    .dropdown-item p {
+        font-size: 20px;
     }
 
     .dropicon-container {
@@ -838,6 +852,14 @@ body {
 
     .nominals div p {
         font-size: 12px !important;
+    }
+
+    .nominals div img {
+        width: 40%;
+    }
+
+    .dropdown-item img {
+        width: 40%;
     }
     
     .footer-item:first-of-type {
