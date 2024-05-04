@@ -67,16 +67,12 @@ btn.addEventListener("click", (e) => {
         return
     }
     let aCount = 0
-    let dCount = 0
     for (let i = 0; i < email.length; i++) {
         if (email[i] == "@") {
             aCount += 1
         }
-        if (email[i] == ".") {
-            dCount += 1
-        }
     }
-    if (aCount != 1 || dCount != 1) {
+    if (aCount != 1) {
         error.innerHTML = "Email harus mengandung 1 @ dan 1 ."
         return
     }
