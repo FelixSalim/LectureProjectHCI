@@ -73,7 +73,7 @@ btn.addEventListener("click", (e) => {
         }
     }
     if (aCount != 1) {
-        error.innerHTML = "Email harus mengandung 1 @ dan 1 ."
+        error.innerHTML = "Email harus mengandung 1 @"
         return
     }
 
